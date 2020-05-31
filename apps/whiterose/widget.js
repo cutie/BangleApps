@@ -1,6 +1,6 @@
 (() => {
   const storage = require('Storage');
-  settingsChronowid = storage.readJSON("chronowid.json",1)||{}; //read settingsChronowid from file
+  settingsChronowid = storage.readJSON("whiterose.json",1)||{}; //read settingsChronowid from file
   var height = 23;
   var width = 58;
   var interval =  0; //used for the 1 second interval timer
@@ -36,15 +36,16 @@
 
   //counts down, calculates and displays
   function countDown() {
+    if (!settingsChronowid.started){return}
     now = new Date();
     diff = settingsChronowid.goal - now; //calculate difference
-    WIDGETS["chronowid"].draw();
+    WIDGETS["whiterose"].draw();
     //time is up
-    if (settingsChronowid.started && diff < 1000) {
+    if (diff < 1000) {
       Bangle.buzz(1500);
       //write timer off to file
       settingsChronowid.started = false;
-      storage.writeJSON('chronowid.json', settingsChronowid);
+      storage.writeJSON('whiterose.json', settingsChronowid);
       clearInterval(interval); //stop interval
     }
     //printDebug();
@@ -83,7 +84,7 @@
   if (settingsChronowid.started) interval = setInterval(countDown, 1000); //start countdown each second
 
   // add the widget
-  WIDGETS["chronowid"]={area:"bl",width:width,draw:draw,reload:function() {
+  WIDGETS["whiterose"]={area:"bl",width:width,draw:draw,reload:function() {
     reload();
     Bangle.drawWidgets(); // relayout all widgets
   }};

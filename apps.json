@@ -1853,16 +1853,18 @@
       {"name":"sleepphasealarm.img","url":"app-icon.js","evaluate":true}
     ]
   },
-  { "id": "aaaaa",
-    "name": "AAAAAAAAA",
-    "shortName":"AAAAA",
+  { "id": "whiterose",
+    "name": "White Rose",
+    "shortName":"WhiteRose",
     "icon": "app.png",
     "version":"0.01",
-    "description": "This is a description of my awesome timer AAAAAAAAAAA",
+    "description": "White Rose timer widget",
     "tags": "",
+    "readme": "README.md",
     "storage": [
-      {"name":"aaaaa.app.js","url":"app.js"},
-      {"name":"aaaaa.img","url":"app-icon.js","evaluate":true}
+      {"name":"whiterose.wid.js","url":"widget.js"},
+      {"name":"whiterose.app.js","url":"app.js"},
+      {"name":"whiterose.img","url":"app-icon.js","evaluate":true}
     ]
   }
 ]

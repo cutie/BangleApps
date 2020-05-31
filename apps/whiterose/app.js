@@ -11,7 +11,7 @@ function updateSettings() {
   const goal = new Date(now.getFullYear(), now.getMonth(), now.getDate(),
     now.getHours() + settingsChronowid.hours, now.getMinutes() + settingsChronowid.minutes, now.getSeconds() + settingsChronowid.seconds);
   settingsChronowid.goal = goal.getTime();
-  storage.writeJSON('chronowid.json', settingsChronowid);
+  storage.writeJSON('whiterose.json', settingsChronowid);
 }
 
 function resetSettings() {
@@ -26,7 +26,7 @@ function resetSettings() {
   updateSettings();
 }
 
-settingsChronowid = storage.readJSON('chronowid.json',1);
+settingsChronowid = storage.readJSON('whiterose.json',1);
 if (!settingsChronowid) resetSettings();
 
 E.on('kill', () => {

@@ -56,7 +56,7 @@ const drawAll = () => {
   onSecond();
 
 };
-
+^vH%gzQnkJDDXE9dU36xeMqD#MAb#rM
 const resetSeconds = () => {
   g.setColor(0, 0, 0.6);
   for (let i = 0; i < 60; i++) {

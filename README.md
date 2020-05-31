@@ -59,7 +59,7 @@ try and keep filenames short to avoid overflowing the buffer.
 * Create an entry in `apps.json` as follows:
 
 ```
-{ "id": "7chname",
+{ "id": "7chname",ls
   "name": "My app's human readable name",
   "shortName" : "Short Name",
   "icon": "app.png",
